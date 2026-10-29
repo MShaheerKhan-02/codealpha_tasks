@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Laptops for gaming, workstations, and everyday computing."
+    />
+    <title>Nexus Store | Laptops for every build</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      body {
+        overflow-x: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <button
+        class="icon-button mobile-menu"
+        aria-label="Open menu"
+        data-action="menu"
+      >
+        ☰
+      </button>
+      <a href="#home" class="brand" aria-label="Nexus Store home"
+        ><span class="brand-mark">N</span><span>Nexus <i>Store</i></span></a
+      >
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#shop">Shop laptops</a><a href="#about">Why Nexus</a
+        ><a href="#journal">Buying guide</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button" data-action="search" aria-label="Search">
+          ⌕
+        </button>
+        <button class="account-button" data-action="account">
+          <span class="account-icon">◯</span
+          ><span class="account-label">Account</span>
+        </button>
+        <button class="cart-button" data-action="cart">
+          Bag <span class="cart-count">0</span>
+        </button>
+        <button
+          class="theme-toggle"
+          data-action="theme"
+          aria-label="Switch theme"
+        >
+          <span class="theme-icon">☾</span><span class="theme-label">Dark</span>
+        </button>
+      </div>
+    </header>
+    <aside class="side-nav" id="side-nav" aria-hidden="true">
+      <button
+        class="modal-close"
+        data-action="close-menu"
+        aria-label="Close menu"
+      >
+        ×
+      </button>
+      <p class="eyebrow">Nexus Store</p>
+      <h2>Browse</h2>
+      <nav class="side-links" aria-label="Store menu">
+        <a href="#shop" data-action="close-menu">Shop laptops</a>
+        <a href="#about" data-action="close-menu">Why Nexus</a>
+        <a href="#journal" data-action="close-menu">Buying guide</a>
+      </nav>
+      <p class="side-label">Categories</p>
+      <nav
+        class="side-links category-links"
+        aria-label="Product categories"
+      ></nav>
+    </aside>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-copy">
+          <p class="eyebrow">Computing without compromise</p>
+          <h1>Find the laptop<br />for your <em>next</em> move.</h1>
+          <p class="hero-intro">
+            From everyday notebooks to serious gaming and workstation power,
+            find a machine built around how you work.
+          </p>
+          <a href="#shop" class="button button-dark"
+            >Explore laptops <span>→</span></a
+          >
+        </div>
+        <div class="hero-image">
+          <img
+            src="https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?auto=format&fit=crop&w=1600&q=88"
+            alt="Modern laptop on a desk"
+          />
+          <div class="hero-note">01 / 04<br /><span>Power your work</span></div>
+        </div>
+      </section>
+
+      <section class="trust-strip">
+        <span>Performance tested</span><span>Clear specifications</span
+        ><span>Secure checkout</span><span>Fast delivery</span>
+      </section>
+
+      <section class="collection section-wrap" id="shop">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">The laptop collection</p>
+            <h2>Power for your kind of work.</h2>
+          </div>
+          <a href="#shop" class="text-link">View all laptops <span>↗</span></a>
+        </div>
+        <div class="filter-row">
+          <div class="category-filters">
+            <button class="filter active" data-category="All">
+              All laptops</button
+            ><button class="filter" data-category="Gaming laptops">
+              Gaming</button
+            ><button class="filter" data-category="Workstation laptops">
+              Workstation</button
+            ><button class="filter" data-category="Everyday laptops">
+              Everyday</button
+            ><button class="filter" data-category="Workstations">
+              Desktop workstations</button
+            ><button class="filter" data-category="Mouse">Mouse</button
+            ><button class="filter" data-category="Keyboard">Keyboard</button
+            ><button class="filter" data-category="Headphones">
+              Headphones</button
+            ><button class="filter" data-category="RAM">RAM</button
+            ><button class="filter" data-category="SSD">SSD</button
+            ><button class="filter" data-category="Graphics cards">
+              Graphics cards
+            </button>
+          </div>
+          <label class="search-field"
+            ><span>⌕</span
+            ><input
+              id="product-search"
+              type="search"
+              placeholder="Search laptops"
+              aria-label="Search products"
+          /></label>
+        </div>
+        <div class="product-grid" id="product-grid">
+          <div class="loading">Preparing the collection...</div>
+        </div>
+      </section>
+
+      <section class="feature-band" id="about">
+        <div class="feature-image">
+          <img
+            src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=1000&q=85"
+            alt="Laptop workstation on a desk"
+          />
+        </div>
+        <div class="feature-copy">
+          <p class="eyebrow">The Nexus standard</p>
+          <h2>Specs you can trust.</h2>
+          <p>
+            We make every product easy to compare, with the processor, memory,
+            storage, and real use case clearly shown before you buy.
+          </p>
+          <a href="#journal" class="text-link"
+            >Read our approach <span>→</span></a
+          >
+        </div>
+      </section>
+
+      <section class="newsletter" id="journal">
+        <div>
+          <p class="eyebrow">Nexus buying guide</p>
+          <h2>Choose the right <em>power</em> level.</h2>
+        </div>
+        <form id="newsletter-form" class="newsletter-form">
+          <label for="newsletter-email">Your email address</label>
+          <div>
+            <input
+              type="email"
+              id="newsletter-email"
+              required
+              placeholder="you@example.com"
+            /><button class="button button-dark" type="submit">
+              Subscribe <span>→</span>
+            </button>
+          </div>
+          <p class="form-note">
+            Occasional laptop advice, new arrivals, and 10% off your first
+            order.
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <a href="#home" class="brand"
+          ><span class="brand-mark">N</span><span>Nexus <i>Store</i></span></a
+        >
+        <p>Laptops for gaming, work, and everything between.</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <strong>Explore</strong><a href="#shop">All laptops</a
+          ><a href="#about">Why Nexus</a><a href="#journal">Buying guide</a>
+        </div>
+        <div>
+          <strong>Help</strong><a href="#" data-action="account">Account</a
+          ><a href="#">Delivery</a><a href="#">Returns</a>
+        </div>
+        <div>
+          <strong>Follow along</strong><a href="#">Instagram</a
+          ><a href="#">YouTube</a><a href="#">The edit</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Nexus Store. All rights reserved.</span>
+      </div>
+    </footer>
+
+    <div class="modal-backdrop" id="auth-modal" aria-hidden="true">
+      <section
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="auth-title"
+      >
+        <button
+          class="modal-close"
+          data-action="close-modal"
+          aria-label="Close"
+        >
+          ×
+        </button>
+        <p class="eyebrow">Welcome in</p>
+        <h2 id="auth-title">Your account</h2>
+        <div class="auth-tabs">
+          <button class="auth-tab active" data-auth-mode="login">Sign in</button
+          ><button class="auth-tab" data-auth-mode="register">
+            Create account
+          </button>
+        </div>
+        <div class="modal-backdrop" id="account-modal" aria-hidden="true">
+          <section
+            class="modal account-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="account-title"
+          >
+            <button
+              class="modal-close"
+              data-action="close-account"
+              aria-label="Close"
+            >
+              ×
+            </button>
+            <p class="eyebrow">Your Nexus profile</p>
+            <h2 id="account-title">Account</h2>
+            <p id="account-summary" class="account-summary"></p>
+            <div class="account-tabs">
+              <button class="auth-tab active" data-account-tab="profile">
+                Profile
+              </button>
+              <button class="auth-tab" data-account-tab="orders">Orders</button>
+              <button class="auth-tab" data-account-tab="security">
+                Password
+              </button>
+              <button class="auth-tab" data-account-tab="address">
+                Address
+              </button>
+            </div>
+            <div id="account-content"></div>
+            <button
+              class="button button-outline full-button"
+              data-action="logout"
+            >
+              Log out
+            </button>
+          </section>
+        </div>
+
+        <div class="modal-backdrop" id="checkout-modal" aria-hidden="true">
+          <section
+            class="modal checkout-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="checkout-title"
+          >
+            <button
+              class="modal-close"
+              data-action="close-checkout"
+              aria-label="Close"
+            >
+              ×
+            </button>
+            <p class="eyebrow">Secure checkout</p>
+            <h2 id="checkout-title">Complete your order</h2>
+            <form id="checkout-form">
+              <label
+                >Payment method<select id="payment-method">
+                  <option value="cod">Cash on delivery</option>
+                  <option value="card">Debit / credit card</option>
+                  <option value="bank">Bank transfer</option>
+                </select></label
+              >
+              <div id="card-fields" class="card-fields hidden">
+                <label
+                  >Card number<input
+                    id="card-number"
+                    inputmode="numeric"
+                    placeholder="0000 0000 0000 0000"
+                /></label>
+                <div class="form-grid">
+                  <label
+                    >Expiry<input id="card-expiry" placeholder="MM/YY" /></label
+                  ><label
+                    >CVV<input
+                      id="card-cvv"
+                      inputmode="numeric"
+                      placeholder="123"
+                  /></label>
+                </div>
+              </div>
+              <label
+                >Full address<input
+                  id="checkout-address"
+                  required
+                  placeholder="House, street, city"
+              /></label>
+              <div class="form-grid">
+                <label>City<input id="checkout-city" required /></label
+                ><label
+                  >Postal code<input id="checkout-postal" required
+                /></label>
+              </div>
+              <p class="checkout-total">
+                Order total <strong id="checkout-total">PKR 0</strong>
+              </p>
+              <button class="button button-dark full-button" type="submit">
+                Place order <span>→</span>
+              </button>
+              <p class="auth-message" id="checkout-message"></p>
+            </form>
+          </section>
+        </div>
+        <form id="auth-form">
+          <label id="name-label" class="hidden"
+            >Full name<input
+              id="auth-name"
+              type="text"
+              autocomplete="name" /></label
+          ><label
+            >Email address<input
+              id="auth-email"
+              type="email"
+              required
+              autocomplete="email" /></label
+          ><label
+            >Password<input
+              id="auth-password"
+              type="password"
+              required
+              minlength="6"
+              autocomplete="current-password" /></label
+          ><button
+            class="button button-dark full-button"
+            type="submit"
+            id="auth-submit"
+          >
+            Sign in <span>→</span>
+          </button>
+          <p class="auth-message" id="auth-message"></p>
+        </form>
+      </section>
+    </div>
+
+    <aside class="cart-drawer" id="cart-drawer" aria-hidden="true">
+      <div class="drawer-head">
+        <div>
+          <p class="eyebrow">Your selection</p>
+          <h2>Your bag <span class="drawer-count">0</span></h2>
+        </div>
+        <button
+          class="modal-close"
+          data-action="close-cart"
+          aria-label="Close bag"
+        >
+          ×
+        </button>
+      </div>
+      <div class="cart-items" id="cart-items"></div>
+      <div class="cart-summary">
+        <div><span>Subtotal</span><strong id="cart-total">PKR 0</strong></div>
+        <p>Shipping calculated at checkout.</p>
+        <button class="button button-dark full-button" data-action="checkout">
+          Continue to checkout <span>→</span>
+        </button>
+      </div>
+    </aside>
+    <div class="toast" id="toast" role="status"></div>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

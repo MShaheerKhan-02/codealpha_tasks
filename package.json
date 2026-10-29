@@ -1,0 +1,25 @@
+{
+  "name": "nestand-shop",
+  "version": "1.0.0",
+  "description": "A responsive computer accessories e-commerce demo built with Vite, Express, and vanilla JavaScript.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "concurrently \"node --watch server.js\" \"vite --host 0.0.0.0\"",
+    "build": "vite build",
+    "dev:server": "node --watch server.js",
+    "dev:client": "vite --host 0.0.0.0",
+    "format": "prettier --write server.js vite.config.js public/app.js public/index.html public/styles.css README.md",
+    "format:check": "prettier --check server.js vite.config.js public/app.js public/index.html public/styles.css README.md"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "prettier": "^3.9.8",
+    "vite": "^6.1.0"
+  }
+}
